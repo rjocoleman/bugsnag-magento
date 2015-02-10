@@ -367,6 +367,9 @@ class Bugsnag_Client
         if (!$error->shouldIgnore() && $this->config->autoNotify) {
             $this->notify($error);
         }
+        ## Begin Edit: Erik Hansen erik@classyllama.com - Show exception to visitor
+        Mage::printException($exception);
+        ## End Edit ##
     }
 
     // Exception handler callback, should only be called internally by PHP's set_error_handler

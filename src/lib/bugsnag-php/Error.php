@@ -208,7 +208,9 @@ class Bugsnag_Error
                     // Check if this key should be filtered
                     $shouldFilter = false;
                     foreach ($this->config->filters as $filter) {
-                        if (strpos($key, $filter) !== false) {
+                        ## Begin Edit: Erik Hansen erik@classyllama.com -- Ensure filter exists and isn't empty
+                        if (!empty($filter) && strpos($key, $filter) !== false) {
+                        ## End Edit ##
                             $shouldFilter = true;
                             break;
                         }

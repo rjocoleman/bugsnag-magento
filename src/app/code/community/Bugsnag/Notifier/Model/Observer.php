@@ -2,18 +2,18 @@
 
 class Bugsnag_Notifier_Model_Observer
 {
-    private static $DEFAULT_NOTIFY_SEVERITIES = "fatal,error";
+    protected static $DEFAULT_NOTIFY_SEVERITIES = "fatal,error";
 
-    private static $NOTIFIER = array(
+    protected static $NOTIFIER = array(
         "name" => "Bugsnag Magento (Official)",
         "version" => "1.0.0",
         "url" => "https://bugsnag.com/notifiers/magento"
     );
 
-    private $client;
-    private $apiKey;
-    private $notifySeverities;
-    private $filterFields;
+    protected $client;
+    protected $apiKey;
+    protected $notifySeverities;
+    protected $filterFields;
 
     public static function fireTestEvent($apiKey) {
         if (strlen($apiKey) != 32) {
@@ -60,7 +60,7 @@ class Bugsnag_Notifier_Model_Observer
         }
     }
 
-    private function addUserTab()
+    protected function addUserTab()
     {
         $customer = Mage::getSingleton('customer/session')->getCustomer();
         $this->client->setUser(array(
@@ -72,12 +72,12 @@ class Bugsnag_Notifier_Model_Observer
         ));
     }
 
-    private function releaseStage()
+    protected function releaseStage()
     {
         return Mage::getIsDeveloperMode() ? "development" : "production";
     }
 
-    private function errorReportingLevel()
+    protected function errorReportingLevel()
     {
         if (empty($this->notifySeverities)) {
             $notifySeverities = "fatal,error";
@@ -95,7 +95,7 @@ class Bugsnag_Notifier_Model_Observer
         return $level;
     }
 
-    private function filterFields()
+    protected function filterFields()
     {
         return array_map('trim', explode("\n", $this->filterFields));
     }

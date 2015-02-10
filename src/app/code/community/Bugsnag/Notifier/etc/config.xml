@@ -11,6 +11,11 @@
         <class>Bugsang_Notifier_Model</class>
       </Bugsnag_Notifier>
     </models>
+    <helpers>
+      <Bugsnag_Notifier>
+        <class>Bugsnag_Notifier_Helper</class>
+      </Bugsnag_Notifier>
+    </helpers>
     <events>
       <controller_action_predispatch>
         <observers>
