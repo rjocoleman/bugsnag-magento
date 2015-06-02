@@ -39,7 +39,7 @@ class Bugsnag_Notifier_Model_Observer
 
         $this->apiKey = Mage::getStoreConfig("dev/Bugsnag_Notifier/apiKey");
         $this->notifySeverities = Mage::getStoreConfig("dev/Bugsnag_Notifier/severites");
-        $this->filterFields = Mage::getStoreConfig("dev/Bugsnag_Notifier/filterFiels");
+        $this->filterFields = Mage::getStoreConfig("dev/Bugsnag_Notifier/filterFields");
 
         // Activate the bugsnag client
         if (!empty($this->apiKey)) {
