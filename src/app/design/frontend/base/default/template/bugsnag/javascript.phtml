@@ -1,0 +1,9 @@
+<?php
+  $jsApiKey = Mage::getStoreConfig('dev/Bugsnag_Notifier/jsApiKey');
+  if ($jsApiKey):
+?>
+  <script
+    src="//d2wy8f7a9ursnm.cloudfront.net/bugsnag-2.min.js"
+    data-apikey="<?php echo $jsApiKey ?>">
+  </script>
+<?php endif; ?>

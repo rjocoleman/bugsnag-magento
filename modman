@@ -2,3 +2,5 @@ src/app/code/community/Bugsnag/Notifier/                                        
 src/app/design/adminhtml/default/default/template/bugsnag/system/config/button.phtml    app/design/adminhtml/default/default/template/bugsnag/system/config/button.phtml
 src/app/etc/modules/Bugsnag_Notifier.xml                                                app/etc/modules/Bugsnag_Notifier.xml
 src/lib/bugsnag-php                                                                     lib/bugsnag-php
+src/app/design/frontend/base/default/layout/bugsnag/notifier.xml                        app/design/frontend/base/default/layout/bugsnag/notifier.xml
+src/app/design/frontend/base/default/template/bugsnag/javascript.phtml                  app/design/frontend/base/default/template/bugsnag/javascript.phtml

@@ -28,6 +28,15 @@
       </controller_action_predispatch>
     </events>
   </global>
+  <frontend>
+    <layout>
+      <updates>
+        <Bugsnag_Notifier>
+          <file>bugsnag/notifier.xml</file>
+        </Bugsnag_Notifier>
+      </updates>
+    </layout>
+  </frontend>
   <admin>
     <routers>
       <adminhtml>
